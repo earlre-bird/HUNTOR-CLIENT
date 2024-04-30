@@ -14,7 +14,7 @@ const MainPage = () => {
         <Link to={'/'}>
           <img src="/image/huntor_logo.png" className={styles.logo} />
         </Link>
-        <img className={styles.user} onClick={handleProfileClick} />
+        <img src="/image/user_default.png" className={styles.user} onClick={handleProfileClick} />
       </div>
     </div>
   );

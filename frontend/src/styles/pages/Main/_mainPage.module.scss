@@ -3,31 +3,31 @@
   flex-direction: column;
   align-items: center;
 
+  width: 100vw;
+  height: 100vh;
+
   .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    width: 100%;
+    width: 80%;
     height: 85px;
 
     padding: 40px;
     border-bottom: 1px solid lightgray;
 
     .logo {
-      width: 250px;
+      width: 270px;
       height: 50px;
     }
 
     .user {
-      position: absolute;
-      right: 40px;
-
       width: 43px;
       height: 43px;
 
       border-radius: 100%;
-      border: 1px solid black;
+      border: 1px solid gray;
       background-color: white;
 
       cursor: pointer;
