@@ -8,29 +8,120 @@
 
   .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
-    width: 80%;
-    height: 85px;
-
-    padding: 40px;
+    width: 100%;
     border-bottom: 1px solid lightgray;
 
-    .logo {
-      width: 270px;
-      height: 50px;
+    .header_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 80%;
+      height: 85px;
+
+      padding: 40px;
+
+      .logo {
+        width: 270px;
+        height: 50px;
+      }
+
+      .user {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 100%;
+        border: 1px solid gray;
+        background-color: white;
+
+        cursor: pointer;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - 85px);
+
+    .subject_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 80%;
+      padding: 20px;
+      gap: 20px;
+
+      .subject_text {
+        font-size: 27px;
+      }
+
+      .subject {
+        display: flex;
+        gap: 20px;
+        padding: 0 20px;
+
+        @mixin item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 100px;
+          height: 60px;
+
+          font-size: 25px;
+          border-radius: 13px;
+          cursor: pointer;
+        }
+
+        .subject_item {
+          @include item;
+
+          &:hover {
+            background-color: #b6dbf96d;
+            transition: background-color 0.3s;
+          }
+
+        }
+
+        .selected_item {
+          @include item;
+          background-color: #6db4ef6d;
+        }
+      }
     }
 
-    .user {
-      width: 43px;
-      height: 43px;
+    .main_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      border-radius: 100%;
-      border: 1px solid gray;
-      background-color: white;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(246, 246, 246);
 
-      cursor: pointer;
+      .card_container {
+        display: flex;
+        padding: 20px 45px;
+
+        width: 80%;
+        height: 100%;
+
+        .card_text {
+          font-size: 18px;
+        }
+
+        .tutoring_card {
+
+        }
+      }
     }
   }
 }
