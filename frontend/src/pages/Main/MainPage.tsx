@@ -2,14 +2,12 @@ import styles from '../../styles/pages/Main/_mainPage.module.scss';
 import Header from '../../components/header';
 
 const MainPage = () => {
-
   return (
     <div className={styles.main_page}>
       <Header />
       <div className={styles.main}>
         <div className={styles.subject_container}>
           <p className={styles.subject_text}>분야</p>
-          <p className={styles.subject_text}>|</p>
           <div className={styles.subject}>
             <div className={styles.selected_item}>국어</div>
             <div className={styles.subject_item}>수학</div>
@@ -21,8 +19,20 @@ const MainPage = () => {
           </div>
         </div>
         <div className={styles.main_item}>
-          <div className={styles.card_container}>
+          <div className={styles.tutor_container}>
             <p className={styles.card_text}>🔎 여러분을 기다리고 있어요!</p>
+            <div className={styles.card_container}>
+              <div className={styles.tutoring_card}>
+                <img src="/image/tutor_default.PNG" className={styles.tutor_img} />
+                <div className={styles.tutor_info}>
+                  <div className={styles.tutor_title}>초등 국어 과외</div>
+                  <div className={styles.tutor_sub}>
+                    <div className={styles.tutor_subject}>국어</div>
+                    <div className={styles.tutor_subject}>온라인</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
