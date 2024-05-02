@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+
+    .header_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 80%;
+      height: 85px;
+
+      padding: 40px;
+
+      .logo {
+        width: 270px;
+        height: 50px;
+      }
+
+      .user {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 100%;
+        border: 1px solid gray;
+        background-color: white;
+
+        cursor: pointer;
+      }
+    }
+  }
