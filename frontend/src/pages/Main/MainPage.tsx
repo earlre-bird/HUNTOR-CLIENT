@@ -1,5 +1,5 @@
 import styles from '../../styles/pages/Main/_mainPage.module.scss';
-import Header from '../../components/header';
+import Header from '../../components/Header';
 import TutorCard from '../../components/TutorCard';
 
 const MainPage = () => {
