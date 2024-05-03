@@ -1,5 +1,6 @@
 import styles from '../../styles/pages/Main/_mainPage.module.scss';
 import Header from '../../components/header';
+import TutorCard from '../../components/TutorCard';
 
 const MainPage = () => {
   return (
@@ -22,16 +23,7 @@ const MainPage = () => {
           <div className={styles.tutor_container}>
             <p className={styles.card_text}>🔎 여러분을 기다리고 있어요!</p>
             <div className={styles.card_container}>
-              <div className={styles.tutoring_card}>
-                <img src="/image/tutor_default.PNG" className={styles.tutor_img} />
-                <div className={styles.tutor_info}>
-                  <div className={styles.tutor_title}>초등 국어 과외</div>
-                  <div className={styles.tutor_sub}>
-                    <div className={styles.tutor_subject}>국어</div>
-                    <div className={styles.tutor_subject}>온라인</div>
-                  </div>
-                </div>
-              </div>
+              <TutorCard />
             </div>
           </div>
         </div>
