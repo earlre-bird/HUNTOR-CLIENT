@@ -1,14 +1,11 @@
 import styles from '../styles/components/_header.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import Dropdown from './Dropdown';
 
 const Header = () => {
   const navigate = useNavigate();
   const [searchInput, setSearchInput] = useState<string>('');
-
-  const handleProfileClick = () => {
-    navigate('/user');
-  };
 
   const handleSearchClick = () => {
     searchInput == '' ? alert('검색어를 입력해주세요!') : navigate('/search');
@@ -41,7 +38,7 @@ const Header = () => {
             <button onClick={handleSearchClick} />
           </div>
         </div>
-        <img src="/image/user_default.png" className={styles.user} onClick={handleProfileClick} />
+        <Dropdown />
       </div>
     </div>
   );
