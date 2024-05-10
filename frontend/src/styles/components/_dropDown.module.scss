@@ -1,3 +1,5 @@
+@import '../variable.module';
+
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -8,8 +10,8 @@
     height: 43px;
 
     border-radius: 100%;
-    border: 1px solid gray;
-    background-color: white;
+    border: 1px solid $border-default;
+    background-color: $white;
 
     cursor: pointer;
   }
@@ -19,22 +21,22 @@
     flex-direction: column;
     position: absolute;
 
-    width: 110px;
+    width: $dropdown-width;
     margin-top: 55px;
     list-style: none;
 
-    border: 1px solid #a2a2a2;
+    border: 1px solid $border-secondary;
     border-radius: 12px;
-    background-color: white;
-    box-shadow: 0px 0px 5px 1px #0000000d;
+    background-color: $white;
+    box-shadow: 0px 0px 5px 1px $shadow-default;
 
-    font-size: 17px;
+    font-size: $font-size-sm;
     font-family: 'Noto Sans KR', sans-serif;
     overflow: hidden;
 
     li {
       padding: 10px 15px;
-      border-bottom: 1px solid lightgray;
+      border-bottom: 1px solid $border-light;
 
       cursor: pointer;
 
@@ -43,8 +45,8 @@
       }
 
       &:hover {
-        color: #4a9adc;
-        background-color: #00000002;
+        color: $blue-dropdown;
+        background-color: $bg-dropdown;
       }
     }
   }

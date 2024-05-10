@@ -24,6 +24,12 @@ const MainPage = () => {
             <p className={styles.card_text}>🔎 여러분을 기다리고 있어요!</p>
             <div className={styles.card_container}>
               <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
             </div>
           </div>
         </div>

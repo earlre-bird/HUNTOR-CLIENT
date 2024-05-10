@@ -1,19 +1,21 @@
+@import '../variable.module';
+
 .tutoring_card {
   display: flex;
   flex-direction: column;
 
-  width: 273px;
-  height: 200px;
+  width: $card-width;
+  height: $card-height;
 
   border-radius: 10px;
-  border: 1px solid lightgray;
+  border: 1px solid $border-light;
 
-  background-color: white;
-  box-shadow: 0px 0px 5px 1px #0000000d;
+  background-color: $white;
+  box-shadow: 0px 0px 5px 1px $shadow-default;
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0px 1px 5px 2px #0000001f;
+    box-shadow: 0px 1px 5px 2px $shadow-dark;
     transition: box-shadow 0.2s;
 
     cursor: pointer;
@@ -32,7 +34,7 @@
     gap: 5px;
 
     .tutor_title {
-      font-size: 18px;
+      font-size: $font-size-card;
       font-weight: 600;
     }
 
@@ -40,7 +42,7 @@
       display: flex;
 
       .tutor_subject {
-        font-size: 15px;
+        font-size: $font-size-xs;
 
         &:first-child::after {
           content: '·';

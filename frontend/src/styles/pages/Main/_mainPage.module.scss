@@ -1,3 +1,5 @@
+@import '../../variable.module';
+
 .main_page {
   display: flex;
   flex-direction: column;
@@ -23,7 +25,7 @@
       gap: 10px;
 
       .subject_text {
-        font-size: 20px;
+        font-size: $font-size-md;
 
         &::after {
           content: '|';
@@ -40,10 +42,10 @@
           justify-content: center;
           align-items: center;
 
-          width: 85px;
-          height: 50px;
+          width: $subject-width;
+          height: $subject-height;
 
-          font-size: 20px;
+          font-size: $font-size-md;
           border-radius: 13px;
           cursor: pointer;
         }
@@ -52,14 +54,14 @@
           @include item;
 
           &:hover {
-            background-color: #e0f0fc;
+            background-color: $blue-light;
             transition: background-color 0.3s;
           }
         }
 
         .selected_item {
           @include item;
-          background-color: #c1dff8;
+          background-color: $blue-default;
         }
       }
     }
@@ -71,20 +73,22 @@
 
       width: 100%;
       height: 100%;
-      background-color: rgb(246, 246, 246);
+      padding: 10px 0;
+
+      background-color: $bg-gray;
 
       .tutor_container {
         display: flex;
         flex-direction: column;
 
         gap: 13px;
-        padding: 20px 45px;
+        padding: 10px 45px;
 
         width: 80%;
         height: 100%;
 
         .card_text {
-          font-size: 18px;
+          font-size: $font-size-card;
         }
 
         .card_container {
