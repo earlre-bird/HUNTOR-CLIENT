@@ -16,53 +16,75 @@
     width: 100%;
     height: calc(100vh - 85px);
 
-    .subject_container {
+    .top_container {
       display: flex;
+      justify-content: space-between;
       align-items: center;
 
       width: 80%;
-      padding: 15px 45px;
-      gap: 10px;
+      padding: 10px 45px;
 
-      .subject_text {
-        font-size: $font-size-md;
-
-        &::after {
-          content: '|';
-          padding: 0 20px;
-        }
-      }
-
-      .subject {
+      .subject_container {
         display: flex;
-        gap: 20px;
+        align-items: center;
 
-        @mixin item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        width: 80%;
+        gap: 10px;
 
-          width: $subject-width;
-          height: $subject-height;
-
+        .subject_text {
           font-size: $font-size-md;
-          border-radius: 13px;
-          cursor: pointer;
-        }
 
-        .subject_item {
-          @include item;
-
-          &:hover {
-            background-color: $blue-light;
-            transition: background-color 0.3s;
+          &::after {
+            content: '|';
+            padding: 0 20px;
           }
         }
 
-        .selected_item {
-          @include item;
-          background-color: $blue-default;
+        .subject {
+          display: flex;
+          gap: 20px;
+
+          @mixin item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: $subject-width;
+            height: $subject-height;
+
+            font-size: $font-size-md;
+            border-radius: 13px;
+            cursor: pointer;
+          }
+
+          .subject_item {
+            @include item;
+
+            &:hover {
+              background-color: $blue-light;
+              transition: background-color 0.3s;
+            }
+          }
+
+          .selected_item {
+            @include item;
+            background-color: $blue-default;
+          }
         }
+      }
+
+      button {
+        display: inline-block;
+
+        width: 70px;
+        height: 30px;
+        border: none;
+
+        background: $login-btn;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        cursor: pointer;
       }
     }
 

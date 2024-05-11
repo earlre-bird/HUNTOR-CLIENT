@@ -7,17 +7,20 @@ const MainPage = () => {
     <div className={styles.main_page}>
       <Header />
       <div className={styles.main}>
-        <div className={styles.subject_container}>
-          <p className={styles.subject_text}>분야</p>
-          <div className={styles.subject}>
-            <div className={styles.selected_item}>국어</div>
-            <div className={styles.subject_item}>수학</div>
-            <div className={styles.subject_item}>영어</div>
-            <div className={styles.subject_item}>과학</div>
-            <div className={styles.subject_item}>사회</div>
-            <div className={styles.subject_item}>외국어</div>
-            <div className={styles.subject_item}>악기</div>
+        <div className={styles.top_container}>
+          <div className={styles.subject_container}>
+            <p className={styles.subject_text}>분야</p>
+            <div className={styles.subject}>
+              <div className={styles.selected_item}>국어</div>
+              <div className={styles.subject_item}>수학</div>
+              <div className={styles.subject_item}>영어</div>
+              <div className={styles.subject_item}>과학</div>
+              <div className={styles.subject_item}>사회</div>
+              <div className={styles.subject_item}>외국어</div>
+              <div className={styles.subject_item}>예술</div>
+            </div>
           </div>
+          <button />
         </div>
         <div className={styles.main_item}>
           <div className={styles.tutor_container}>
