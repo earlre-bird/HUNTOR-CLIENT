@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import SearchInput from './SearchInput';
 import Dropdown from './Dropdown';
 
-const Header = () => {
+type HeaderProps = {
+  keyword?: string;
+};
+
+const Header: React.FC<HeaderProps> = ({ keyword }) => {
   return (
     <div className={styles.header}>
       <div className={styles.header_item}>
@@ -11,7 +15,7 @@ const Header = () => {
           <Link to={'/'}>
             <img src="/image/huntor_logo.png" className={styles.logo} />
           </Link>
-          <SearchInput />
+          <SearchInput inputValue={keyword} />
         </div>
         <Dropdown />
       </div>

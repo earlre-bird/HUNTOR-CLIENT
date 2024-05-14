@@ -1,13 +1,17 @@
 import styles from '../styles/components/_searchInput.module.scss';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const SearchInput = () => {
-  const navigate = useNavigate();
+type InputProps = {
+  inputValue?: string;
+};
+
+const SearchInput: React.FC<InputProps> = ({ inputValue }) => {
   const [searchInput, setSearchInput] = useState<string>('');
 
   const handleSearchClick = () => {
-    searchInput == '' ? alert('검색어를 입력해주세요!') : navigate('/search');
+    searchInput == ''
+      ? alert('검색어를 입력해주세요!')
+      : (window.location.href = `/search?keyword=${encodeURIComponent(searchInput)}`);
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,12 +23,12 @@ const SearchInput = () => {
       handleSearchClick();
     }
   };
-  
+
   return (
     <div className={styles.input_wrapper}>
       <input
         placeholder="어떤 과외를 찾고 있나요?"
-        value={searchInput}
+        value={inputValue ? inputValue : searchInput}
         onChange={handleSearchChange}
         onKeyDown={handleEnterKeyPress}
       />
