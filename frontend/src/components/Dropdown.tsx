@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Dropdown = () => {
   const navigate = useNavigate();
-  const [view, setView] = useState<boolean>(true);
+  const [view, setView] = useState<boolean>(false);
 
   const handleDropdownClick = (e: React.MouseEvent) => {
     e.stopPropagation();
