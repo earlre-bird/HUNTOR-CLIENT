@@ -30,6 +30,7 @@ const SearchPage = () => {
           </div>
 
           <div className={styles.keyword_container}>
+            {/* <p>📌 검색 카테고리를 선택해주세요 !</p> */}
             <div className={styles.search_keyword}>서울 전체</div>
             <div className={styles.search_keyword}>온라인</div>
             <div className={styles.search_keyword}>국어</div>
@@ -51,6 +52,7 @@ const SearchPage = () => {
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </div>

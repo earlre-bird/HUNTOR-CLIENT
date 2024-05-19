@@ -22,7 +22,7 @@ const MainPage = () => {
           </div>
           <button />
         </div>
-        <div className={styles.main_item}>
+        <div className={styles.main_container}>
           <div className={styles.tutor_container}>
             <p className={styles.card_text}>🔎 여러분을 기다리고 있어요!</p>
             <div className={styles.card_container}>

@@ -15,8 +15,8 @@ const UserPage = () => {
         </div>
       </div>
       <div className={styles.tutoring_container}>
-        {/* <p className={styles.tutoring_text}>✏️ 과외를 시작해보세요!</p> */}
-        <p className={styles.tutoring_text}>✨ 헌터를 기다리고 있어요!</p>
+        {/* <p className={styles.tutoring_text}>✏️ 과외를 시작해보세요 !</p> */}
+        <p className={styles.tutoring_text}>✨ 헌터를 기다리고 있어요 !</p>
         <div className={styles.tutoring_list}>
 
           <div className={styles.tutor_card}>
