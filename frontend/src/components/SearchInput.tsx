@@ -29,6 +29,7 @@ const SearchInput: React.FC<InputProps> = ({ inputValue }) => {
       <input
         placeholder="어떤 과외를 찾고 있나요?"
         value={inputValue ? inputValue : searchInput}
+        maxLength={15}
         onChange={handleSearchChange}
         onKeyDown={handleEnterKeyPress}
       />
