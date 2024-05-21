@@ -1,8 +1,33 @@
 import styles from '../../styles/pages/Main/_mainPage.module.scss';
+import { useState } from 'react';
 import Header from '../../components/Header';
 import TutorCard from '../../components/TutorCard';
 
+type ItemProps = {
+  subject: string;
+  selected: boolean;
+  onClicked: (subject: string) => void;
+};
+
 const MainPage = () => {
+  const [selectedSubject, setSelectedSubject] = useState<string>('');
+  const subject: string[] = ['국어', '수학', '영어', '과학', '사회', '외국어', '예술'];
+
+  const handleSubject = (item: string) => {
+    selectedSubject === item ? setSelectedSubject('') : setSelectedSubject(item);
+  };
+
+  const SubjectItem: React.FC<ItemProps> = ({ subject, selected, onClicked }) => {
+    return (
+      <div
+        onClick={() => onClicked(subject)}
+        className={selected ? styles.selected_item : styles.subject_item}
+      >
+        {subject}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.main_page}>
       <Header />
@@ -11,13 +36,14 @@ const MainPage = () => {
           <div className={styles.subject_container}>
             <p className={styles.subject_text}>분야</p>
             <div className={styles.subject}>
-              <div className={styles.selected_item}>국어</div>
-              <div className={styles.subject_item}>수학</div>
-              <div className={styles.subject_item}>영어</div>
-              <div className={styles.subject_item}>과학</div>
-              <div className={styles.subject_item}>사회</div>
-              <div className={styles.subject_item}>외국어</div>
-              <div className={styles.subject_item}>예술</div>
+              {subject.map((item, id) => (
+                <SubjectItem
+                  key={id}
+                  subject={item}
+                  onClicked={handleSubject}
+                  selected={selectedSubject === item}
+                />
+              ))}
             </div>
           </div>
           <button />
