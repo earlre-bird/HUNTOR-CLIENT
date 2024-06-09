@@ -1,5 +1,6 @@
 import styles from '../../styles/pages/Main/_mainPage.module.scss';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import TutorCard from '../../components/TutorCard';
 
@@ -10,11 +11,17 @@ type ItemProps = {
 };
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const subject: string[] = ['국어', '수학', '영어', '과학', '사회', '외국어', '예술'];
 
   const handleSubject = (item: string) => {
     selectedSubject === item ? setSelectedSubject('') : setSelectedSubject(item);
+  };
+
+  const handleEnrollButton = () => {
+    navigate('/enrollment');
   };
 
   const SubjectItem: React.FC<ItemProps> = ({ subject, selected, onClicked }) => {
@@ -47,7 +54,9 @@ const MainPage = () => {
             </div>
           </div>
           {/* <button className={styles.login_btn} /> */}
-          <button className={styles.enroll_btn}>과외 등록</button>
+          <button className={styles.enroll_btn} onClick={handleEnrollButton}>
+            과외 등록
+          </button>
         </div>
         <div className={styles.main_container}>
           <div className={styles.tutor_container}>
