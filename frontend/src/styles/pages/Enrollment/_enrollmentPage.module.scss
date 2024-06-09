@@ -1,12 +1,6 @@
 @import '../../variable.module';
+@import '../../mixins.module';
 
 .enrollment_page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100vw;
-  height: 100vh;
-
-  overflow-y: auto;
+  @include mainContainer;
 }

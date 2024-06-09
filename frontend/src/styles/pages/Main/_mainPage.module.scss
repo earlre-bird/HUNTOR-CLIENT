@@ -1,14 +1,8 @@
 @import '../../variable.module';
+@import '../../mixins.module';
 
 .main_page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100vw;
-  height: 100vh;
-
-  overflow-y: auto; 
+  @include mainContainer;
 
   .main {
     display: flex;
@@ -45,21 +39,8 @@
           display: flex;
           gap: 20px;
 
-          @mixin item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            width: $subject-width;
-            height: $subject-height;
-
-            font-size: $font-size-md;
-            border-radius: 13px;
-            cursor: pointer;
-          }
-
           .subject_item {
-            @include item;
+            @include selectItem;
 
             &:hover {
               background-color: $blue-light;
@@ -68,7 +49,7 @@
           }
 
           .selected_item {
-            @include item;
+            @include selectItem;
             background-color: $blue-default;
           }
         }

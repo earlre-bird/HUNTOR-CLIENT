@@ -69,6 +69,18 @@ const MainPage = () => {
               <TutorCard />
               <TutorCard />
               <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
+              <TutorCard />
             </div>
           </div>
         </div>
