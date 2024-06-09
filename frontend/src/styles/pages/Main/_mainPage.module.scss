@@ -74,7 +74,7 @@
         }
       }
 
-      button {
+      .login_btn {
         display: inline-block;
 
         width: 70px;
@@ -86,6 +86,25 @@
         background-position: center;
 
         cursor: pointer;
+      }
+
+      .enroll_btn {
+        width: 85px;
+        height: 37px;
+
+        border-radius: 8px;
+        border: none;
+        background-color: $blue-light;
+
+        font-size: $font-size-xs;
+        font-family: 'Noto Sans KR', sans-serif;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: $blue-default;
+          transition: background-color 0.3s;
+        }
       }
     }
 

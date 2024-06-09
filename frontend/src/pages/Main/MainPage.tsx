@@ -46,7 +46,8 @@ const MainPage = () => {
               ))}
             </div>
           </div>
-          <button />
+          {/* <button className={styles.login_btn} /> */}
+          <button className={styles.enroll_btn}>과외 등록</button>
         </div>
         <div className={styles.main_container}>
           <div className={styles.tutor_container}>
